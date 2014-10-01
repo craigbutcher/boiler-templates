@@ -1,0 +1,134 @@
+// Description  Normalize - Reset everything
+
+html,body,div,span,applet,object,iframe, h1,h2,h3,h4,h5,h6,p,blockquote,pre,hr, a,abbr,address,cite,code, del,dfn,em,img,ins,kbd,q,s,samp, small,strong,sub,sup,tt,var,b,u,i, dl,dt,dd,ol,ul,li, fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure, footer,header,hgroup,menu,nav,section,summary, time,mark,audio,video
+  margin 0
+  padding 0
+
+article,aside,details,figcaption,figure,footer, header,hgroup,menu,nav,section
+  display  block
+
+h1,h2,h3,h4,h5,h6
+  font-size 100%
+
+table
+  border-collapse collapse
+  border-spacing 0
+
+strong,b,mark
+  font-weight bold
+  font-style inherit
+
+em,i,cite,q,address,dfn,var
+  font-style italic
+  font-weight inherit
+
+abbr[title],dfn[title]
+  cursor help
+  border-bottom 1px dotted
+
+ins
+  border-bottom 1px solid
+
+a,u,ins
+  text-decoration none
+
+del,s
+  text-decoration line-through
+
+pre,code,samp,kbd
+  font-family monospace
+
+small
+  font-size 0.75em
+
+img
+  border none
+  font-style italic
+
+input,select,option,optgroup, textarea
+  font inherit
+
+// ---- Box Sizing <3 ----
+*, *before, *after
+  -moz-box-sizing border-box
+  -webkit-box-sizing border-box
+  box-sizing border-box
+
+// ---- Main ----
+html
+  overflow-y scroll
+  line-height 1.5
+  font-size 62.5%
+
+// ---- Quotes ----
+q
+  quotes "‘" "’" "“" "”" 
+
+q
+  &:before
+    content "‘"
+    contentopen-quote 
+  &:after
+    content "’"
+    content close-quote
+  q
+    &:before
+      content "“"
+      content open-quote 
+    &:after
+      content "”"
+      content close-quote 
+
+blockquote
+  quotes  "“" "”" 
+  p
+    &:before
+      content "“"
+      content open-quote
+    &:after
+      content ""
+      content no-close-quote 
+    &:last-of-typeafter
+      content "”"
+      content close-quote 
+
+.source
+  display block
+  text-indent 0
+  margin-top -Xpx
+  margin-top -Xrem
+  &:before
+    content "—"
+
+// ---- Images ----
+img
+  max-width 100%
+  height auto
+  font-style italic
+
+// ---- Objects ----
+object
+  max-width 100% 
+
+// ---- Tables ----
+table
+  width 100% 
+
+// ---- Misc ----
+.accessibility
+  position absolute
+  left -99999px 
+
+input, textarea, select
+  -webkit-appearance none
+  *focus
+    outline none 
+
+// ---- Clear Floats ----
+.cf
+  zoom 1
+  &:before, &:after
+    content""
+    display table
+  &:after
+    clear both

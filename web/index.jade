@@ -1,0 +1,123 @@
+//- Index.jade
+
+extends ./includes/layout.jade
+
+block title
+  title Example Layout - Craig's Boiler Template!
+
+block content
+  section(role='banner')
+    header
+      h1 header
+
+  nav(role='nav')
+    ul
+      li
+        a(href='') nav one
+      li
+        a(href='') nav two
+      li
+        a(href='') nav three
+
+  main(role='main')
+    h1 main
+    div.content
+      //- It is a good idea to use Markdown to write content for the page instead of traditional HTML
+      //- Learn it over at http://daringfireball.net/projects/markdown
+      :markdown
+        # heading one
+        ## heading two
+        ### heading three
+        #### heading four
+        ##### heading five
+        ###### heading six
+
+        This is a long paragraph talking about bacons, eggs and chips! A good mug of tea will complete it.
+
+        This is an unordered list
+
+        + VHS
+        + DVD
+        + Bluray
+
+        This is an ordered list:
+
+        1. Apple
+        2. Orange
+        3. Banana
+
+        > This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+        consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+        Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+
+        > Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+        id sem consectetuer libero luctus adipiscing.
+
+        1986\. What a great season (use the backslash to escape the period to stop making it as a list)
+
+            This is a code block
+
+        A horizontal rule
+
+        ---
+
+        Link example:
+
+        [Example URL](http://example.com)
+
+        Or automatic links would help
+
+        <http://example.com>
+
+        Email Address?
+
+        <address@example.com>
+
+        Emphasis
+
+        *I see what you mean there*
+
+        or
+
+        **I don't see it?**
+
+        If you want to talk about `code`...
+
+        Mind the \*literal asterisks\*!
+
+      // You can also do
+      // include ./post/article-001.md
+
+  form
+    label(for='emails') Emails:
+    input(tabindex='1', type='email', id='email', autocomplete='username', value='', placeholder='your@email.com', autofocus='')
+
+    label(for='password') Password:
+    input(tabindex='2', type='password', id='password', autocomplete='current-password')
+
+    label(for='checkboxes') Multiple checkboxes
+
+    input(name='iOS 5', type='checkbox', value='iOS 5')
+    | iOS 5
+    input(name='iOS 6', type='checkbox', value='iOS 6')
+    | iOS 6
+    input(name='iOS 7', type='checkbox', value='iOS 7')
+    | iOS 7
+    input(name='iOS 8 beta', type='checkbox', value='iOS 8 beta')
+    | iOS 8 Beta
+
+    label(for='radio') Select one radio button
+    input(name='iOS 6', type='radio', value='iOS 6')
+    | iOS 6
+    input(name='iOS 7', type='radio', value='iOS 7')
+    | iOS 7
+
+    button Send 
+
+  // Mixing Forms
+  form(name='input', action='html_form_action.asp', method='post')
+    mixin name('user', null, 'User')
+    mixin password('pswd', null, 'Password')
+    mixin message('message', null, 'textarea')
+    mixin submit('do', 'Login')
+

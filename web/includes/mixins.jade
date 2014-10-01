@@ -1,0 +1,17 @@
+//- Mixin Forms!
+
+mixin name(name, value, title)
+    input(tabindex='1', type='text' name=name, id='name', value=value, autocomplete='username', placeholder='your@email.com', autofocus='')
+
+mixin password(name, value, title)
+    input(tabindex='2', type='password', name=name, value=value, id='password', autocomplete='current-password')
+
+mixin message(message)
+    textarea(type='text', id='message', name=name, value=value)
+      
+mixin submit(name, value, title)
+    input(type='submit' name=name value=value)
+
+mixin ipsum
+  Proin ornare ligula eu tellus tempus elementum. Aenean bibendum iaculis mi, nec blandit lacus interdum vitae. Vestibulum non nibh risus, a scelerisque purus. Ut vel arcu ac tortor adipiscing hendrerit vel sed massa. Fusce sem libero, lacinia vulputate interdum non, porttitor non quam. Aliquam sed felis ligula. Duis non nulla magna. 
+    

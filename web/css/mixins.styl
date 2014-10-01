@@ -1,0 +1,52 @@
+// ---- Mixins ----
+
+// Font Sizing
+
+font-size(_size)
+  if typeof(_size) == 'unit'
+      if unit(_size) == 'rem'
+          font-size (_size*10)px
+  font-size _size
+
+// No Display
+noshow()
+  display: none
+
+cimg()
+  display: block
+  margin: 0 auto
+
+// Anchors
+dfanchors()
+  a
+    @extend $transition
+    &:link, &:visited
+      color: alizarin
+    &:hover
+      color: peterriver
+
+      // Media Queries
+bp($point)
+  if $point == boulder
+    @media only screen and (min-width: 1024px)
+      {block}
+  else if $point == cobble
+    @media only screen and (min-width: 768px)
+      {block}
+  else if $point == max-rock
+    @media only screen and (max-width: 600px)
+      {block}
+  else if $point == rock
+    @media only screen and (min-width: 600px)
+      {block}
+  else if $point == stone
+    @media only screen and (min-width: 480px)
+      {block}
+  else if $point == pebble
+    @media only screen and (min-width: 320px)
+      {block}
+  else if $point == printing
+    @media print
+      {block}
+
+
