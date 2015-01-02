@@ -88,7 +88,7 @@ block content
       // You can also do
       // include ./post/article-001.md
 
-  form
+  form(role='search')
     label(for='emails') Emails:
     input(tabindex='1', type='email', id='email', autocomplete='username', value='', placeholder='your@email.com', autofocus='')
 
@@ -121,3 +121,7 @@ block content
     mixin message('message', null, 'textarea')
     mixin submit('do', 'Login')
 
+// Footer
+
+footer(role='contentinfo')
+  h1 this is the footer
