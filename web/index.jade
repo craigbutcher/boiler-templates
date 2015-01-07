@@ -88,6 +88,13 @@ block content
       // You can also do
       // include ./post/article-001.md
 
+// Hint when using <button>, <input>, <a>
+//
+// When creating a button, use <button>
+// When creating input form, use <input>
+// When creating links, use <a>
+
+
   form(role='search')
     label(for='emails') Emails:
     input(tabindex='1', type='email', id='email', autocomplete='username', value='', placeholder='your@email.com', autofocus='')
@@ -112,7 +119,9 @@ block content
     input(name='iOS 7', type='radio', value='iOS 7')
     | iOS 7
 
-    button Send 
+    button Send
+    
+  
 
   // Mixing Forms
   form(name='input', action='html_form_action.asp', method='post')
