@@ -142,6 +142,25 @@ block content
     mixin message('message', null, 'textarea')
     mixin submit('do', 'Login')
 
+  // Standard form
+  form(name='input', action=#', method='post')
+    fieldset
+      div.controlGroup
+        label(for='userEmail')
+          Your Email Address:
+        input(type='email', name='userEmail', id='userEmail', placeholder='Enter your email address")
+      div.controlGroup
+        label(for='userEmail')
+          Recipients email address:
+        input(type='email', name='recipientEmail', id='recipientEmail', placeholder='Enter recipients email address")
+      div.controlGroup
+        textarea
+      div.buttonsGroup
+        button(type='button', role='button', aria-disabled='false')
+          cancel
+        button(type='submit', role='button', aria-disabled='false')  
+          send
+      
 // Footer
 
 footer(role='contentinfo')
