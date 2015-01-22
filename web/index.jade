@@ -96,28 +96,29 @@ block content
 
 
   form(role='search')
-    label(for='emails') Emails:
-    input(tabindex='1', type='email', id='email', autocomplete='username', value='', placeholder='your@email.com', autofocus='')
+    fieldset
+      label(for='emails') Emails:
+      input(tabindex='1', type='email', id='email', autocomplete='username', value='', placeholder='your@email.com', autofocus='')
+      label(for='password') Password:
+      input(tabindex='2', type='password', id='password', autocomplete='current-password')
 
-    label(for='password') Password:
-    input(tabindex='2', type='password', id='password', autocomplete='current-password')
+    fieldset
+      label(for='checkboxes') Multiple checkboxes
+      input(name='iOS 5', type='checkbox', value='iOS 5')
+      | iOS 5
+      input(name='iOS 6', type='checkbox', value='iOS 6')
+      | iOS 6
+      input(name='iOS 7', type='checkbox', value='iOS 7')
+      | iOS 7
+      input(name='iOS 8 beta', type='checkbox', value='iOS 8 beta')
+      | iOS 8 Beta
 
-    label(for='checkboxes') Multiple checkboxes
-
-    input(name='iOS 5', type='checkbox', value='iOS 5')
-    | iOS 5
-    input(name='iOS 6', type='checkbox', value='iOS 6')
-    | iOS 6
-    input(name='iOS 7', type='checkbox', value='iOS 7')
-    | iOS 7
-    input(name='iOS 8 beta', type='checkbox', value='iOS 8 beta')
-    | iOS 8 Beta
-
-    label(for='radio') Select one radio button
-    input(name='iOS 6', type='radio', value='iOS 6')
-    | iOS 6
-    input(name='iOS 7', type='radio', value='iOS 7')
-    | iOS 7
+    fieldset
+      label(for='radio') Select one radio button
+      input(name='iOS 6', type='radio', value='iOS 6')
+      | iOS 6
+      input(name='iOS 7', type='radio', value='iOS 7')
+      | iOS 7
 
     button Send
     
