@@ -1,1 +1,37 @@
 // ---- Footer ----
+
+// Sticky Footer Deus Ex
+// http://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+
+body
+  /* [1] */
+  /* Ye Olde Flexbox for Webkit */
+  display -webkit-box
+  /* Tweener flexbox for IE10 */
+  display -ms-flexbox
+  /* Prefixed "new flexbox" */
+  display -webkit-flex
+  /* unprefixed standard "new flexbox" version for the rest */
+  display flex
+  	
+  /* [2] */
+  /* Your grandparents flexbox for old Webkit */
+  -webkit-box-orient vertical
+  /* Prefixed new syntax: */
+  -webkit-flex-direction column
+  /* (Same syntax for weird IE tweener) */
+  -ms-flex-direction column
+  /* unprefixed new syntax */
+  flex-direction column
+    
+  /* [3] */
+  height: 100%
+
+.main-menu, .header, .banner, .breadcrumbs
+  flex none
+  
+.content, .mod-no-flexbox .content
+  -webkit-box-flex 1
+  -ms-flex 1 0 auto
+  flex 1 0 auto
+  -webkit-flex 1 0 auto
