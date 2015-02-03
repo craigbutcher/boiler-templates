@@ -85,14 +85,13 @@ block content
 
         Mind the \*literal asterisks\*!
 
-      // You can also do
-      // include ./post/article-001.md
+				// You can also do
+				// include ./post/article-001.md
 
-// Hint when using <button>, <input>, <a>
-//
-// When creating a button, use <button>
-// When creating input form, use <input>
-// When creating links, use <a>
+				// Hint when using <button>, <input>, <a>
+				// When creating a button, use <button>
+				// When creating input form, use <input>
+				// When creating links, use <a>
 
 
   form(role='search')
@@ -123,14 +122,13 @@ block content
     button Send
     
   // Tables
-  
   table
     tbody
       tr.headerTitles
-        td(role="columnheade") Column Header One
-        td(role="columnheade") Column Header Two
-        td(role="columnheade") Column Header Three
-        td(role="columnheade") Column Header Four
+        td(role="columnheader") Column Header One
+        td(role="columnheader") Column Header Two
+        td(role="columnheader") Column Header Three
+        td(role="columnheader") Column Header Four
       tr(role="row")
         td Data One
         td Data Two
@@ -138,9 +136,9 @@ block content
         td Data Four
 
   // Mixing Forms
-  form(name='input', action='html_form_action.asp', method='post')
+  form(name='input', action='html_form_action.php', method='post')
     mixin name('user', null, 'User')
-    mixin password('pswd', null, 'Password')
+    mixin password('password', null, 'Password')
     mixin message('message', null, 'textarea')
     mixin submit('do', 'Login')
 
@@ -165,13 +163,13 @@ block content
         button(type='submit', role='button', aria-disabled='false')  
           send
       
-      aside(role="complementary")
-        ul
-          li
-            a links
-          li
-            a links
+	aside(role="complementary")
+		ul
+			li
+				a links
+			li
+				a links
 // Footer
 
 footer(role='contentinfo')
-  h1 this is the footer
+  h1 this is the footer and the role for this is contentinfo
