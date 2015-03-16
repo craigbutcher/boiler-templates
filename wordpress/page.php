@@ -1,11 +1,17 @@
-<?php get_header(); ?>
+<?php
+/*
+ * Template Name: Default
+ *
+ */
 
-<main role="main">
+get_header(); ?>
+
+<main role="main" class="blog">
   <header>
-    <h1><a class="logo" href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+    <h1><a class="main-logo" href="<?php echo home_url(); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/dwlogo-2.png" alt="Drew Worthley" width="200" height="200" /></a></h1>
   </header>
 
-  <div class="single-post-layout">
+  <div class="single-page-layout">
     <?php if ( have_posts() ) : ?>
       <?php while ( have_posts() ) : the_post(); ?>
     <article>
@@ -20,7 +26,7 @@
 
     <?php endwhile; /* rewind or continue if all posts have been fetched */ ?>
 
-    <?php comments_template( '', true ); ?>
+
 
   </div>
 
