@@ -1,0 +1,33 @@
+//- Index.jade
+
+extends ./includes/layout.jade
+
+block title
+  title You do not have permissions to view this page - Craig's Boiler Template!
+
+block content
+  section.banner(role='banner')
+    header
+      h1 You do not have permissions to view this page.
+
+  nav(role='nav')
+    ul
+      li
+        a(href='') nav one
+      li
+        a(href='') nav two
+      li
+        a(href='') nav three
+
+  main(role='main')
+    h1 main
+    div.content
+      //- It is a good idea to use Markdown to write content for the page instead of traditional HTML
+      //- Learn it over at http://daringfireball.net/projects/markdown
+      :markdown
+        Ask your webmaster, admin, etc for access.
+
+// Footer
+
+footer(role='contentinfo')
+  h1 this is the footer and the role for this is contentinfo
